@@ -1,0 +1,40 @@
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $orange;
+    row-gap: 2rem;
+    padding: 2rem;
+    min-width: 30%;
+    max-width: 30%;
+    border-bottom: 1px solid $white;
+
+    .form-title {
+      color: #000;
+      margin-bottom: 1rem;
+    }
+    label {
+      .user-name,
+      .user-credential {
+        padding: 0.5rem;
+      }
+    }
+    .submit-button {
+      color: $white;
+      background-color: $black;
+    }
+
+    .error-msg {
+      border-top: 1px solid $white;
+      padding-top: 1rem;
+    }
+  }
+}
