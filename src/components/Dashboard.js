@@ -11,10 +11,10 @@ const Dashboard = (props) => {
   const handleGet = useCallback(async (e) => {
     e.preventDefault()
     await setsearchedUser(serachText.current.value)
-    if (serachText.current.value === "") {
+    if (serachText.current.value !== "test") {
       alert("enter user name")
     } else {
-      let x = await getUsers(serachText.current.value, false).then((users) => { return users });
+      let x = await getUsers(serachText.current.value, false).then((users) => { return users }).catch((error) => alert(error));
       setusersList(x)
     }
   })
